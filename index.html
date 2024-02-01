@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard- A</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ******GRID CONTAINER ***** -->
+    <div class="grid-container">
+        <!-- header -->
+        <div class="header">
+            <div class="menu-icon" onclick="openSideBar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">person</span>
+            </div>
+
+        </div>
+
+        <!-- side tag -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined">inventory</span> Ade's Inventory
+                </div>
+                <span class="material-icons-outlined" onclick=closeSidebar()>close</span>
+            </div>
+            
+            <!-- list items -->
+            <div class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">dashboard</span>
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">inventory_2</span>
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">fact_check</span>
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">add_shopping_cart</span>
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">shopping_cart</span>
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">poll</span>
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">settings</span>
+                </li>
+            </div>
+
+        </aside>
+
+        <!-- ***** MAIN ****-->
+
+        <main class="main-container">
+            <div class="main-title">
+                <p class="font-weight-bold">DASHBOARD</p>
+                <div class="main-cards">
+                    <!-- card -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">PRODUCT</p>
+                            <span class="material-icons-outlined text-blue">inventory_2</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">96</span>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- card -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">PURCHASE ORDERS</p>
+                            <span class="material-icons-outlined text-orange">add_shopping_cart</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">57</span>
+                    </div>
+                    <!-- end of card -->
+
+                    <!-- card -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">SALES ALERT</p>
+                            <span class="material-icons-outlined text-green">shopping_cart</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">24</span>
+                    </div>
+                    <!-- end of card -->
+                    
+                    <!-- card -->
+                    <div class="card">
+                        <div class="card-inner">
+                            <p class="text-primary">INVENTORY ALERT</p>
+                            <span class="material-icons-outlined text-red">notification_important</span>
+                        </div>
+                        <span class="text-primary font-weight-bold">29</span>
+                    </div>
+                    <!-- end of card -->
+                </div>
+            </div>
+
+            <!-- the two charts -->
+                <div class="charts">
+                    <div class="charts-card">
+                        <p class="chart-title">Best Selling Products Today</p>
+                        <div id="bar-chart"></div>
+                    </div>
+                </div>
+                <!-- second chart -->
+                <div class="charts">
+                    <div class="charts-card">
+                        <p class="chart-title">Purchase  And Sales Order</p>
+                        <div id="area-chart"></div>
+                    </div>
+                </div>
+        </main>
+        <!-- This is the end of main... -->
+    </div>
+
+
+    
+<!-- Apex chart script -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.2/apexcharts.min.js" integrity="sha512-vIqZt7ReO939RQssENNbZ+Iu3j0CSsgk41nP3AYabLiIFajyebORlk7rKPjGddmO1FQkbuOb2EVK6rJkiHsmag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- JavaScript -->
+<script src="index.js"></script>
+</body>
+</html>
